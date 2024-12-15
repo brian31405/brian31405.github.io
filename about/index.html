@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,29 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .profile-section img {
+            max-width: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .profile-details {
+            flex: 1;
+        }
+        h1, h2 {
+            color: #444;
         }
         table {
             width: 100%;
@@ -34,63 +46,70 @@
             border: 1px solid #ddd;
         }
         th, td {
-            padding: 10px;
+            padding: 8px;
             text-align: left;
         }
         th {
             background-color: #f4f4f4;
         }
-        h1 {
-            color: #f4f4f4;
-        }
-        h2, h3 {
-            color: #333;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-    </header>
     <div class="container">
-        <h2>基本資料</h2>
-        <p>姓名：詹博翔（Po-Hsiang Chan, Brian Jhan）</p>
-        <p>出生日期：2003年01月02日</p>
-        <p>聯絡電話：+886-972-067-697</p>
-        <p>電子郵件：brian31405@gmail.com</p>
-        <p>通訊地址：104 臺北市中山區德惠街3巷3號7樓712室</p>
-        <p>戶籍地址：251 新北市淡水區自強路309巷8號4樓</p>
+        <h1>About Me</h1>
+        <div class="profile-section">
+            <img src="selfie.png" alt="Your Profile Image" id="profile-image"> 
+            <div class="profile-details">
+                <h2>基本資料</h2>
+                <p>姓名：詹博翔（Po-Hsiang Chan, Brian Jhan）</p>
+                <p>出生日期：2003年01月02日</p>
+                <p>聯絡電話：+886-972-067-697</p>
+                <p>電子郵件：brian31405@gmail.com</p>
+                <p>通訊地址：104 臺北市中山區德惠街3巷3號7樓712室</p>
+                <p>戶籍地址：251 新北市淡水區自強路309巷8號4樓</p>
+            </div>
+        </div>
 
         <h2>學歷</h2>
         <table>
-            <tr>
-                <th>級別</th>
-                <th>學校名稱</th>
-                <th>科系</th>
-                <th>起訖日期</th>
-            </tr>
-            <tr>
-                <td>學士</td>
-                <td>私立大同大學</td>
-                <td>資訊經營學系 (資管)</td>
-                <td>110/9 ~ 至今</td>
-            </tr>
-            <tr>
-                <td>高中</td>
-                <td>新北市私立及人高級中等學校 (現新北市私立中信高級中等學校)</td>
-                <td>普通科</td>
-                <td>107/9 ~ 110/6</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>級別</th>
+                    <th>學校名稱</th>
+                    <th>科系</th>
+                    <th>起訖日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>學士</td>
+                    <td>私立大同大學</td>
+                    <td>資訊經營學系 (資管)</td>
+                    <td>110/9 ~ 至今</td>
+                </tr>
+                <tr>
+                    <td>高中</td>
+                    <td>新北市私立及人高級中等學校 (現新北市私立中信高級中等學校)</td>
+                    <td>普通科</td>
+                    <td>107/9 ~ 110/6</td>
+                </tr>
+            </tbody>
         </table>
 
         <h2>社團經歷</h2>
         <h3>111 學年度</h3>
-        <p>大同大學科學開源服務社 教學長</p>
-        <p>大同大學宿舍自治會 總務及器材長</p>
+        <ul>
+            <li>大同大學科學開源服務社 教學長</li>
+            <li>大同大學宿舍自治會 總務及器材長</li>
+        </ul>
         <h3>112 學年度</h3>
-        <p>大同大學宿舍自治會 總務及器材長</p>
+        <ul>
+            <li>大同大學宿舍自治會 總務及器材長</li>
+        </ul>
         <h3>113 學年度</h3>
-        <p>大同大學宿舍自治會 總務及器材長</p>
+        <ul>
+            <li>大同大學宿舍自治會 總務及器材長</li>
+        </ul>
 
         <h2>工作經歷</h2>
         <ul>
@@ -111,64 +130,66 @@
         </ul>
 
         <h2>社群經歷</h2>
-        <ul>
-            <li>SITCON 2019, 2020, 2021 Attendee</li>
-            <li>COSCUP 2019, 2020 Attendee</li>
-            <li>COSCUP 2021 場務組物流股組員</li>
-            <li>SITCON 2022 製播組組員（R1副導播）</li>
-            <li>COSCUP 2022 製播組組員</li>
-            <li>COSCUP 2022 場務組物流股組員</li>
-            <li>COSCUP 2023 製播組實習組長</li>
-            <li>SITCON 2024 製播組組員（R1導播）</li>
-            <li>COSCUP 2024 製播組組員</li>
-            <li>SITCON 2025 製播組副組長</li>
-            <li>TWNOG 6 (2025) Infrastructure & Image Team</li>
-        </ul>
+        <p>SITCON 2019,2020,2021 Attendee</p>
+        <p>COSCUP 2019,2020 Attendee</p>
+        <p>COSCUP 2021 場務組物流股組員</p>
+        <p>SITCON 2022 製播組組員（R1副導播）</p>
+        <p>COSCUP 2022 製播組組員</p>
+        <p>COSCUP 2022 場務組物流股組員</p>
+        <p>COSCUP 2023 製播組實習組長</p>
+        <p>SITCON 2024 製播組組員（R1導播）</p>
+        <p>COSCUP 2024 製播組組員</p>
+        <p>SITCON 2025 製播組副組長</p>
+        <p>TWNOG 6 (2025) Infrastructure & Image Team</p>
 
         <h2>教學助理</h2>
         <table>
-            <tr>
-                <th>課程名稱</th>
-                <th>開課系所（班級）</th>
-                <th>授課教師</th>
-                <th>開課學年（學期）</th>
-                <th>職務</th>
-            </tr>
-            <tr>
-                <td>基本計算機實驗</td>
-                <td>資訊經營學系(資經二～四)</td>
-                <td>張廷棟</td>
-                <td>111(一)</td>
-                <td>教學助理</td>
-            </tr>
-            <tr>
-                <td>基本計算機實驗</td>
-                <td>資訊經營學系(資經二～四)</td>
-                <td>張廷棟</td>
-                <td>111(二)</td>
-                <td>教學助理</td>
-            </tr>
-            <tr>
-                <td>基本計算機實驗</td>
-                <td>資訊經營學系(資經二～四)</td>
-                <td>張廷棟</td>
-                <td>112(一)</td>
-                <td>教學助理</td>
-            </tr>
-            <tr>
-                <td>基本計算機實驗</td>
-                <td>資訊經營學系(資經二～四)</td>
-                <td>張廷棟</td>
-                <td>112(二)</td>
-                <td>教學助理</td>
-            </tr>
-            <tr>
-                <td>基本計算機實驗</td>
-                <td>資訊經營學系(資經二～四)</td>
-                <td>張廷棟</td>
-                <td>113(一)</td>
-                <td>教學助理</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>課程名稱</th>
+                    <th>開課系所（班級）</th>
+                    <th>授課教師</th>
+                    <th>開課學年（學期）</th>
+                    <th>職務</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>基本計算機實驗</td>
+                    <td>資訊經營學系(資經二～四)</td>
+                    <td>張廷棟</td>
+                    <td>111(一)</td>
+                    <td>教學助理</td>
+                </tr>
+                <tr>
+                    <td>基本計算機實驗</td>
+                    <td>資訊經營學系(資經二～四)</td>
+                    <td>張廷棟</td>
+                    <td>111(二)</td>
+                    <td>教學助理</td>
+                </tr>
+                <tr>
+                    <td>基本計算機實驗</td>
+                    <td>資訊經營學系(資經二～四)</td>
+                    <td>張廷棟</td>
+                    <td>112(一)</td>
+                    <td>教學助理</td>
+                </tr>
+                <tr>
+                    <td>基本計算機實驗</td>
+                    <td>資訊經營學系(資經二～四)</td>
+                    <td>張廷棟</td>
+                    <td>112(二)</td>
+                    <td>教學助理</td>
+                </tr>
+                <tr>
+                    <td>基本計算機實驗</td>
+                    <td>資訊經營學系(資經二～四)</td>
+                    <td>張廷棟</td>
+                    <td>113(一)</td>
+                    <td>教學助理</td>
+                </tr>
+            </tbody>
         </table>
 
         <h2>大學專題</h2>
