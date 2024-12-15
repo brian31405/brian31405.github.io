@@ -25,15 +25,68 @@
             display: flex;
             align-items: flex-start;
             gap: 20px;
+            flex-wrap: wrap;
         }
+
         .profile-section img {
             max-width: 310px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
             object-fit: cover;
         }
+
         .profile-details {
             flex: 1;
+            min-width: 300px;
         }
+
+        .profile-details p {
+            white-space: nowrap;
+            margin: 8px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .profile-section img {
+                max-width: 250px;
+            }
+
+            .profile-details {
+                width: 100%;
+                text-align: left;
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .profile-section img {
+                max-width: 200px;
+            }
+        }
+        
         h1, h2 {
             color: #444;
         }
